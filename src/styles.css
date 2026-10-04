@@ -953,3 +953,245 @@ a {
     width: 100%;
   }
 }
+
+
+/* Extended application form styling, scoped to /apply. */
+.apply-intro h1.application-title {
+  font-size: clamp(3rem, 6.3vw, 5.9rem);
+  line-height: 0.9;
+}
+
+.apply-guidance .apply-welcome {
+  margin-bottom: 0.65rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.apply-guidance p + p {
+  margin-top: 0.7rem;
+}
+
+.application-form {
+  gap: 0;
+  width: min(100%, 54rem);
+}
+
+.application-section {
+  padding-block: clamp(1.75rem, 3.5vw, 2.75rem);
+  border-top: 1px solid rgb(24 25 22 / 24%);
+}
+
+.application-section-heading {
+  display: grid;
+  grid-template-columns: auto minmax(1rem, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.application-section-heading .eyebrow {
+  color: var(--color-muted);
+  font-size: 0.62rem;
+}
+
+.application-section-heading h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.apply-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 1.2rem;
+}
+
+.apply-field-wide {
+  grid-column: 1 / -1;
+}
+
+.apply-field label,
+.apply-interests legend,
+.apply-choice-group legend,
+.apply-commitments legend {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.required-mark {
+  color: #a52e20;
+}
+
+.apply-optional {
+  margin-left: 0.3rem;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.apply-field input:not([type="checkbox"]):not([type="radio"]),
+.apply-field select,
+.apply-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 3.35rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgb(24 25 22 / 35%);
+  border-radius: 0;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.apply-field textarea {
+  min-height: 9rem;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.apply-field input[aria-invalid="true"],
+.apply-field select[aria-invalid="true"],
+.apply-field textarea[aria-invalid="true"] {
+  border-color: #a52e20;
+}
+
+.apply-field input:focus-visible,
+.apply-field select:focus-visible,
+.apply-field textarea:focus-visible,
+.apply-interest-option input:focus-visible,
+.apply-radio-option input:focus-visible,
+.apply-commitment-option input:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+.apply-choice-group,
+.apply-commitments {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.apply-choice-group legend,
+.apply-commitments legend {
+  margin-bottom: 0.7rem;
+  padding: 0;
+}
+
+.apply-radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.apply-radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.85rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgb(24 25 22 / 30%);
+  background: var(--color-white);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.apply-radio-option input,
+.apply-commitment-option input {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--color-ink);
+}
+
+.apply-commitment-list {
+  border-top: 1px solid rgb(24 25 22 / 24%);
+}
+
+.apply-commitment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 0.25rem;
+  border-bottom: 1px solid rgb(24 25 22 / 18%);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.apply-commitment-option input {
+  margin-top: 0.15rem;
+}
+
+.apply-other-interest {
+  width: min(100%, 31rem);
+  margin-top: 1.25rem;
+}
+
+.apply-final-question {
+  border-bottom: 1px solid rgb(24 25 22 / 24%);
+}
+
+@media (max-width: 700px) {
+  .apply-intro h1.application-title {
+    font-size: clamp(2.55rem, 10vw, 4rem);
+    line-height: 0.92;
+  }
+
+  .application-section {
+    padding-block: 1.65rem;
+  }
+
+  .application-section-heading {
+    grid-template-columns: auto minmax(1rem, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .application-section-heading h2 {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .apply-fields-grid,
+  .apply-about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .apply-field-wide {
+    grid-column: auto;
+  }
+
+  .apply-radio-list {
+    gap: 0.5rem;
+  }
+
+  .apply-radio-option {
+    min-height: 3rem;
+    padding-inline: 0.9rem;
+  }
+
+  .apply-interest-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .apply-submit {
+    width: 100%;
+  }
+}
