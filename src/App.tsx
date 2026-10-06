@@ -1,4 +1,4 @@
-﻿import { useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 const disciplines = [
   "Photography",
@@ -19,7 +19,7 @@ const disciplines = [
 ];
 
 // Temporary demo recipient in Nigerian local format; replace it with Esther's number.
-const WHATSAPP_RECIPIENT = "07043400958";
+const WHATSAPP_RECIPIENT = "08172507642";
 
 // WhatsApp click-to-chat needs international digits; convert the supplied Nigerian local format.
 function toWhatsAppPhone(number: string) {
